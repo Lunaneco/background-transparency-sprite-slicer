@@ -47,15 +47,6 @@
 - 同梱ライブラリはローカル配信です。バージョンとハッシュは [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) に記録しています。
 - 脆弱性の報告方法は [SECURITY.md](SECURITY.md) を参照してください。
 
-## GitHub Pagesで公開する手順
-
-1. GitHubで空のリポジトリを作成します。
-2. このフォルダの**中身**をリポジトリのルートへ配置して、`main` ブランチへpushします。
-3. リポジトリの **Settings → Pages → Build and deployment** で **GitHub Actions** を選びます。
-4. **Actions → Deploy GitHub Pages → Run workflow** を明示的に実行します。完了すると、PagesのURLが表示されます。
-
-`package.json` やビルド処理は不要です。ワークフローはGitHub公式のPages Actions構成に沿った静的サイト用設定で、ActionsはコミットSHAに固定しています。サイト配信は自動では始まらず、上記の手動実行時だけ開始します。GitHubのSecret Scanning / Push Protection、Dependabot alerts、mainブランチ保護も有効にしてください。詳細は[GitHub Pagesの公式手順](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)を参照してください。
-
 ## ローカルで確認する場合
 
 ```sh
